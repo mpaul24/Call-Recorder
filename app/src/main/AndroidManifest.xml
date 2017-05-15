@@ -10,7 +10,8 @@
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,8 +27,48 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
+        <activity
+            android:name="com.google.android.gms.drive.sample.demo.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.HomeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.gms.drive.sample.demo.ListFilesActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.SyncRequestsActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.RetrieveContentsActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.RetrieveContentsWithProgressDialogActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateEmptyFileActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileInAppFolderActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateFolderActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.EditContentsActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.EditMetadataActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileWithCreatorActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.PickFileWithOpenerActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.PickFolderWithOpenerActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.RetrieveMetadataActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileInFolderActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.CreateFolderInFolderActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.ListFilesInFolderActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesInFolderActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.PinFileActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.events.ListenChangeEventsForFilesActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryNonTextFilesActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesSharedWithMeActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesWithAInTitleActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryStarredTextFilesActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryTextOrHtmlFilesActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.InsertUpdateCustomPropertyActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesWithCustomPropertyActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.DeleteCustomPropertyActivity" />
+        <activity android:name="com.google.android.gms.drive.sample.demo.QuerySortedFilesActivity" />
         <receiver android:name=".Receiver">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
